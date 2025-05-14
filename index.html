@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="icon" href="img/cat.png" />
+  <title>Meows & Brews</title>
+  <!-- Orelega One for the logo text -->
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-container"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/mb.png" alt="Meows & Brews" />
+        <p class="logo-text">MEOWS & BREWS</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#testimonials">TESTIMONIAL</a></li>
+        <li><a href="#about">OUR STORY</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="signin.html" class="sign-in">SIGN IN</a>
+        <img src="img/icon.png" alt="Bag" />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="cafe">
+      <div class="text-section">
+        <h2>SAVOR THE <span class="highlight">MEOWMENT</span> IN EVERY SIP</h2>
+        <p>
+          Welcome to Meows & Brews!<br/>
+          A place where coffee is art, moments are treasured, and warmth is always served.
+          Sit back, relax, and let us brew something special just for you.
+        </p>
+        <a href="shopnow.html" class="about-btn">SHOP NOW</a>
+
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat">
+            <span class="number">20+</span>
+            <div class="label">Items of Coffee</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span class="number">20+</span>
+            <div class="label">Order Running</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span class="number">1K+</span>
+            <div class="label">Happy Customer</div>
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <!-- beans.png behind the cup -->
+        <img src="img/beans.png" alt="Coffee Beans" class="beans-img" />
+        <img src="img/cup.png" alt="Coffee Cup" />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="img/location-icon.png" alt="Location" />
+        </div>
+        <h3>BEST PLACE</h3>
+        <p>Welcome to our cozy and pet-friendly corner, where you can savor the rich aroma and indulge in the velvety goodness of your favorite coffee.</p>
+    </div>
+  
+    <div class="feature">
+    <div class="feature-icon">
+      <img src="img/quality-icon.png" alt="Quality" />
+    </div>
+    <h3>BEST QUALITY</h3>
+    <p>Indulge in the captivating symphony of flavors, as each sip of our meticulously sourced and expertly roasted coffee transports.</p>
+  </div>
+  
+    <div class="feature">
+      <div class="feature-icon">
+        <img src="img/delivery-icon.png" alt="Delivery" />
+      </div>
+      <h3>BEST SERVICE</h3>
+      <p>Experience the epitome of coffee service excellence, where every cup is lovingly crafted with passion and precision.</p>
+    </div>
+  </section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu-section">
+  <h2>CHOOSE YOUR FAVORITE</h2>
+  <p class="menu-subtitle">Please serve yourself without any hesitate</p>
+  
+  <div class="category-icons">
+    <div class="category active" data-category="coffee">
+      <img src="img/coffee-cup.png" alt="Coffee">
+      <span>Coffee</span>
+    </div>
+    <div class="category" data-category="non-coffee">
+      <img src="img/non-coffee.png" alt="Non-Coffee">
+      <span>Non-Coffee</span>
+    </div>
+    <div class="category" data-category="frappe">
+      <img src="img/frappe.png" alt="Frappe">
+      <span>Frappe</span>
+    </div>
+    <div class="category" data-category="pastry">
+      <img src="img/pastry.png" alt="Pastry">
+      <span>Pastry</span>
+    </div>
+    <div class="category" data-category="pasta">
+      <img src="img/pasta.png" alt="Pasta">
+      <span>Pasta</span>
+    </div>
+  </div>
+  
+  <div class="carousel-container">
+    <button class="carousel-nav prev">
+      <img src="img/button-left.png" alt="Previous">
+    </button>
+    
+    <div class="coffee-menu">
+      <!-- Coffee Items (5 items) -->
+      <div class="coffee-item category-active" data-category="coffee">
+        <div class="card">
+          <img src="menu/spanish.png" alt="Spanish Latte">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item category-active" data-category="coffee">
+        <div class="card">
+          <img src="menu/caramel-meowchiato.png" alt="Caramel Meowchiato">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item category-active" data-category="coffee">
+        <div class="card">
+          <img src="menu/americato.png" alt="Americato">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item category-active" data-category="coffee">
+        <div class="card">
+          <img src="menu/cafe-latte.png" alt="Cafe Latte">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item category-active" data-category="coffee">
+        <div class="card">
+          <img src="menu/salted-caramel-latte.png" alt="Salted Caramel Latte">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Non-Coffee Items (5 items) -->
+      <div class="coffee-item" data-category="non-coffee">
+        <div class="card">
+          <img src="menu/non-coffee1.png" alt="Purrfectly Peachy Fizz">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="non-coffee">
+        <div class="card">
+          <img src="menu/non-coffee2.png" alt="Mewtella Mocha">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="non-coffee">
+        <div class="card">
+          <img src="menu/non-coffee3.png" alt="Mewberry Pink Lemonade">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="non-coffee">
+        <div class="card">
+          <img src="menu/non-coffee4.png" alt="Kitty's Matcha Whiskers">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="non-coffee">
+        <div class="card">
+          <img src="menu/non-coffee5.png" alt="Furtastic Strawberry Swirl">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Frappe items (5 items) -->
+      <div class="coffee-item" data-category="frappe">
+        <div class="card">
+          <img src="menu/frappe-1.png" alt="Mossy Paws">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="frappe">
+        <div class="card">
+          <img src="menu/frappe-2.png" alt="Meowberry Cheesecake">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="frappe">
+        <div class="card">
+          <img src="menu/frappe-3.png" alt="Mochakitty Frappe">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="frappe">
+        <div class="card">
+          <img src="menu/frappe-4.png" alt="Cocoa Paws">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="frappe">
+        <div class="card">
+          <img src="menu/frappe-5.png" alt="Carameow Frappe">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pastry items (5 items) -->
+      <div class="coffee-item" data-category="pastry">
+        <div class="card">
+          <img src="menu/pastry-1.png" alt="Butter Croissant">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pastry">
+        <div class="card">
+          <img src="menu/pastry-2.png" alt="Strawberry Cupcake">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pastry">
+        <div class="card">
+          <img src="menu/pastry-3.png" alt="Cinnamon Roll">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pastry">
+        <div class="card">
+          <img src="menu/pastry-4.png" alt="Chocolate Chip Muffin">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pastry">
+        <div class="card">
+          <img src="menu/pastry-5.png" alt="Butter Cookie">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pasta items (5 items) -->
+      <div class="coffee-item" data-category="pasta">
+        <div class="card">
+          <img src="menu/pasta-1.png" alt="Spaghetti Bolognese">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pasta">
+        <div class="card">
+          <img src="menu/pasta-2.png" alt="Pesto and Cheese">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pasta">
+        <div class="card">
+          <img src="menu/pasta-3.png" alt="Creamy Lobster Linguine">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pasta">
+        <div class="card">
+          <img src="menu/pasta-4.png" alt="Chicken Alfredo">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coffee-item" data-category="pasta">
+        <div class="card">
+          <img src="menu/pasta-5.png" alt="Carbonara">
+          <div class="item-info">
+            <button class="favorite-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-nav next">
+      <img src="img/button-right.png" alt="Next">
+    </button>
+  </div>
+  
+  <div class="menu-pagination">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  
+  <a href="#" class="view-more">Discover More</a>
+</section>
+
+<!-- Testimonials Section with Auto-Sliding -->
+<section id="testimonials" class="testimonials">
+  <h2>TESTIMONIALS</h2>
+  
+  <div class="testimonial-carousel-container">
+    <div class="testimonial-carousel">    
+      <div class="testimonial-slide">
+        <div class="testimonial">
+          <div class="testimonial-author">
+            <img src="testimonial/elodie.jpg" alt="Testimonial Author" class="author-img">
+          </div>
+          <p>"Really cozy place. The coffee was great and the cats were so calm and friendly. Spent a couple of hours just relaxing."</p>
+          <div class="author-info">
+            <h4>Elodie Maven</h4>
+            <span class="date">March 2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-slide">
+        <div class="testimonial">
+          <div class="testimonial-author">
+            <img src="testimonial/jade.jpg" alt="Testimonial Author" class="author-img">
+          </div>
+          <p>"Went over to unwind. I had a little hang out with a cat that slept next to me the whole time. Very peaceful."</p>
+          <div class="author-info">
+            <h4>Jade Ellison</h4>
+            <span class="date">March 2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-slide">
+        <div class="testimonial">
+          <div class="testimonial-author">
+            <img src="testimonial/dexter.jpg" alt="Testimonial Author" class="author-img">
+          </div>
+          <p>"The drinks were tasty and the atmosphere was calm. I enjoyed watching the cats play while I worked on my laptop."</p>
+          <div class="author-info">
+            <h4>Dexter Morgan</h4>
+            <span class="date">March 2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-slide">
+        <div class="testimonial">
+          <div class="testimonial-author">
+            <img src="testimonial/Ivy.jpg" alt="Testimonial Author" class="author-img">
+          </div>
+          <p>"Such a delightful experience! The cats were adorable and the matcha latte was perfect. Will definitely be returning soon with friends."</p>
+          <div class="author-info">
+            <h4>Ivy Merritt</h4>
+            <span class="date">April 2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-slide">
+        <div class="testimonial">
+          <div class="testimonial-author">
+            <img src="testimonial/clara.jpg" alt="Testimonial Author" class="author-img">
+          </div>
+          <p>"Found my new favorite study spot! The quiet atmosphere and gentle cat companions made my work session so much more enjoyable. The pastries are incredible too."</p>
+          <div class="author-info">
+            <h4>Clara Winslow</h4>
+            <span class="date">April 2025</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <!-- Our Story Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <h2>OUR STORY</h2>
+    
+    <div class="about-intro">
+      <p>At Meows & Brews, we believe that coffee is more than just a drink—it's an experience. Inspired by the warmth and charm of our feline friends, we've created a cozy space where you can slow down, savor every sip, and enjoy the simple joys of life.</p>
+    
+      <p>Our mission is to serve expertly crafted coffee in an atmosphere filled with comfort, connection, and a touch of cat-titude. Whether you're here to jumpstart your day, unwind with a good book, or share laughter with friends, we're here to make your visit purrfect in every way.</p>
+    </div>
+    
+    <div class="story-columns">
+      <div class="story-column left-column">
+        <div class="column-content">
+          <p>The idea behind Meows & Brews was born from a love of two things that comfort the soul: a perfectly brewed cup of coffee and the calming presence of cats. What started as a daydream shared between lifelong cat lovers and café regulars quickly turned into a mission: to create a cozy space where people could slow down, sip slowly, and share a peaceful moment with furry companions.</p>
+          
+          <p>We noticed how often people escaped to cafés to relax, to think, or to simply take a break from the noise of the world. And we also saw how therapeutic the presence of cats could be—soft purrs, playful paws, quiet cuddles. We thought, Why not combine the two?</p>
+        </div>
+      </div>
+      
+      <div class="story-column right-column">
+        <div class="column-content">
+          <p>Each cat that lives in our café has its own story—some were rescued, some rehomed, all loved. They're not just part of the ambiance; they're the heart of the experience. And for every guest who walks through our doors, we hope to offer a moment of warmth, a little escape, and maybe even a new feline friend.</p>
+          
+          <p>Today, Meows & Brews isn't just a café. It's a community. A place where cat lovers meet over matcha. Where strangers become friends. And where every sip and soft purr reminds us to savor the meowment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© Meows & Brews 2025</p>
+        <p>All rights reserved</p>
+      </div>
+      
+      <div class="footer-social">
+        <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+      </div>
+      
+      <div class="footer-right">
+        <p>HOURS: 7AM-10PM</p>
+        <p>LOCATION: 123 Coffee St</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+</body>
+</html>
+
