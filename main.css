@@ -1046,14 +1046,13 @@ footer {
 
 /* Make the cat larger and positioned for overlap effect */
 .contact-left img {
-  max-width: 440px; /* Increased from 250px */
+  max-width: 440px; 
   height: auto;
-  margin-bottom: -80px; /* Creates overlap with social section */
-  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3)); /* Adds subtle shadow */
+  margin-bottom: -80px; 
 }
 
 .contact-right {
-  flex: 0 0 65%;
+  flex: 0 0 35%;
   padding: 50px 20px 50px 0;
 }
 
@@ -1061,7 +1060,7 @@ footer {
   font-size: 1.8rem;
   margin-bottom: 30px;
   color: #D4A373;
-  text-align: center; /* Changed from left to center */
+  text-align: center;
   font-family: 'Maven Pro', sans-serif;
 }
 
@@ -1075,11 +1074,12 @@ footer {
 }
 
 .form-row .form-group {
-  flex: 1;
+  width: 400px;
 }
 
 .form-group {
   margin-bottom: 15px;
+  width: 820px;
 }
 
 .form-group label {
