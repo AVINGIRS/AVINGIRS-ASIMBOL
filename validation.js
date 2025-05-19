@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.focus();
         } else {
             // Valid email submitted - show success popup
-            event.preventDefault(); // Prevent actual form submission for demo purposes
+            event.preventDefault(); 
             
             notification.style.display = 'none';
             
