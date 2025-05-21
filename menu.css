@@ -1,0 +1,414 @@
+/* mainu.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background-color: #FEFAE0;
+    color: #432818;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #432818;
+    letter-spacing: 3px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 40px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #432818;
+    border-radius: 8px;
+    background-color: #FAEDCD;
+    font-size: 16px;
+    outline: none;
+    color: #432818;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #D4A373;
+    box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.3);
+}
+
+.search-input::placeholder {
+    color: #8B7355;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #432818;
+    opacity: 0.9;
+    pointer-events: none; /* Makes the icon non-interactive */
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    filter: brightness(0.8); /* Makes the icon darker */
+}
+
+.cart-icon:hover {
+    opacity: 1;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #D4A373; /* Changed to requested color */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #432818;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); /* Added drop shadow */
+}
+
+.tab img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tab.active {
+    background-color: #B5916E;
+    color: #FEFAE0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced drop shadow for active tab */
+}
+
+.tab:hover:not(.active) {
+    background-color: #C99B69;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content */
+.content {
+    margin-bottom: 40px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    background-color: #FAEDCD;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #000000;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain; /* Changed from cover to contain to show full image */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #FAEDCD; /* Light background to make product stand out */
+}
+
+.product-name {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #432818;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+/* For cards with price-container */
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0;
+}
+
+/* For cards without price-container */
+.card .price {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #432818;
+    text-align: left;
+    align-self: flex-start;
+    margin: 8px 0;
+}
+
+.card .add-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.price {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #432818;
+    text-align: left;
+}
+
+.add-btn {
+    background-color: #D4A373;
+    color: #432818;
+    border: 1px solid #432818;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-btn:hover {
+    background-color: #C99B69;
+    transform: translateY(-2px);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    padding-top: 20px;
+}
+
+.back-link {
+    background: none;
+    border: none;
+    color: #8B7355;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.back-link:hover {
+    color: #432818;
+}
+
+/* Search functionality styles */
+.search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FAEDCD;
+    border: 1px solid #432818;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #E5D1B8;
+    cursor: pointer;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #E5D1B8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .search-box {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .tab {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .tab img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #FAEDCD; /* warm cream */
+    border: 2px solid #000000; /* strong black stroke */
+    padding: 16px 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #000000;
+    opacity: 0;
+    transform: translateY(-25px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 9999;
+    letter-spacing: 0.03em;
+}
+
+/* Show notification with bounce effect */
+#cart-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    animation: bounceIn 0.5s ease forwards;
+}
+
+/* Bounce in keyframes */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
