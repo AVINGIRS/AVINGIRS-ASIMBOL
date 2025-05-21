@@ -263,25 +263,28 @@ body {
 }
 
 .back-link {
-    background-color: #FAEDCD;
+    background-color: #f8f3e9;
     border: 2px solid #8B7355;
-    border-radius: 30px;
+    border-radius: 20px;
     color: #8B7355;
     font-family: 'Maven Pro', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 8px 16px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 25px auto;
+    margin: 15px auto;
+    text-decoration: none;
+    width: fit-content;
 }
 
 .back-link:before {
-    margin-right: 8px;
-    font-size: 18px;
+    content: '←';
+    margin-right: 6px;
+    font-size: 16px;
     transition: transform 0.3s ease;
 }
 
@@ -289,7 +292,7 @@ body {
     background-color: #8B7355;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .back-link:hover:before {
@@ -433,4 +436,49 @@ body {
     100% {
         transform: translateY(0);
     }
+}
+
+/* Cart Icon and Counter Styling */
+.cart-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    filter: brightness(0.8); /* Makes the icon darker */
+}
+
+.cart-icon:hover {
+    opacity: 1;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #D4A373;
+    color: #432818;
+    font-size: 12px;
+    font-weight: 700;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #FEFAE0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cart-link:hover .cart-count {
+    transform: scale(1.1);
+    background-color: #C99B69;
 }

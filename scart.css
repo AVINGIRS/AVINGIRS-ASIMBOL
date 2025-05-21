@@ -1,0 +1,608 @@
+/* Keep all original CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+    background-color: #fefae3;
+    color: #54392c;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #54392c;
+}
+
+.cart-container {
+    background-color: #fefae3;
+    border-radius: 10px;
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0d8c0;
+    color: #54392c;
+    font-weight: 500;
+}
+
+.header-item {
+    text-align: left;
+    padding-left: 15px; /* Added to align with content below */
+}
+
+.header-price, 
+.header-quantity, 
+.header-total {
+    text-align: center;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding: 20px 0;
+    align-items: center;
+    border-bottom: 1px solid #e0d8c0;
+}
+
+/* Improved item-info layout to prevent image cropping */
+.item-info {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 10px; /* Added padding on the right side */
+    width: 100%; /* Ensure it takes full width of its grid cell */
+    overflow: visible; /* Prevent overflow clipping */
+    min-height: 90px; /* Ensure enough vertical space for the image */
+}
+
+/* Fixed image display - ensuring no cropping */
+.item-image {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* Changed from cover to contain to show entire image */
+    margin-right: 15px;
+    border-radius: 8px;
+    display: block; /* Ensure proper display */
+    position: relative; /* Enable positioning context */
+    z-index: 1; /* Ensure image appears above other elements if needed */
+}
+
+.item-details {
+    min-width: 0; /* Allows text to wrap properly */
+    flex-grow: 1;  /* Take up remaining space */
+    overflow: hidden; /* Prevent text overflow */
+}
+
+.item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: #7a6a5d;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Allow long words to break */
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #a8937e;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.item-price, 
+.item-total {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Improved item-quantity styling */
+.item-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff6e6;
+    border-radius: 20px;
+    padding: 5px;
+    border: 1px solid #e0d8c0;
+    max-height: 40px; /* Ensure consistent height */
+}
+
+.decrease-btn, 
+.increase-btn {
+    width: 28px;
+    height: 28px;
+    min-width: 28px; /* Prevent shrinking */
+    background-color: #54392c;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: background-color 0.2s ease;
+    user-select: none; /* Prevents text selection on button click */
+}
+
+.decrease-btn:hover, 
+.increase-btn:hover {
+    background-color: #6b4a37;
+}
+
+.quantity-value {
+    margin: 0 12px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 15px; /* Added horizontal padding to align with grid */
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #54392c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.business-hours {
+    background-color: #faf0d7;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.business-hours p {
+    margin: 5px 0;
+}
+
+.back-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    background-color: #f8f3e9;
+    border: 2px solid #8B7355;
+    border-radius: 20px;
+    color: #8B7355;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.back-link:before {
+    content: '←';
+    margin-right: 6px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #8B7355;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.back-link:hover:before {
+    transform: translateX(-3px);
+}
+
+.back-link:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 600px) {
+    .cart-header, .cart-item {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+    
+    .item-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+    
+    .item-name {
+        font-size: 1rem;
+    }
+    
+    .item-description {
+        font-size: 0.85rem;
+    }
+    
+    .decrease-btn, 
+    .increase-btn {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+    }
+}
+
+/* Add these styles to your existing CSS */
+.thank-you-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.thank-you-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fefae3;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: translateY(30px);
+    opacity: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slide-in 0.5s forwards 0.2s;
+}
+
+.thank-you-modal.show .modal-content {
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.checkmark-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #54392c;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-width: 3;
+    stroke: #54392c;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.modal-content h2 {
+    color: #54392c;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    animation: fade-in 0.5s forwards 1.2s;
+    opacity: 0;
+}
+
+.modal-content p {
+    color: #7a6a5d;
+    margin-bottom: 25px;
+    animation: fade-in 0.5s forwards 1.4s;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.close-modal-btn {
+    background-color: #54392c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: button-appear 0.5s forwards 1.6s;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes button-appear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-modal-btn:hover {
+    background-color: #6b4a37;
+    transform: translateY(-2px);
+}
+
+.close-modal-btn:active {
+    transform: translateY(0);
+}
+
+/* Maven Pro font for the entire form */
+#contact h2,
+#contact label,
+#contact input,
+#contact textarea,
+#contact button {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+#contact h2 {
+    font-family: 'Maven Pro', sans-serif;
+    color: #D4A373;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #3b2a20;
+    color: #e6d8c6;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 0 0 35%;
+    padding: 30px 20px 0;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Make the cat larger and positioned for overlap effect */
+.contact-left img {
+    max-width: 440px; 
+    height: auto;
+    margin-bottom: -80px; 
+}
+
+.contact-right {
+    flex: 0 0 35%;
+    padding: 50px 20px 50px 0;
+}
+
+.contact-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #D4A373;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 820px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: 'Maven Pro', sans-serif;
+    color: #D4A373;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D4A373;
+    border-radius: 4px;
+    background-color: #FEFAE0;
+    color: #3b2a20;
+    font-size: 0.9rem;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: transparent;
+    color: #D4A373;
+    border: 2px solid #D4A373;
+    border-radius: 4px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.submit-btn:hover {
+    background-color: #D4A373;
+    color: #3b2a20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start; /* Changed from flex-end to flex-start */
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #d9b38c;
+    color: #3b2a20;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Social Section - Adjusted for cat overlap */
+.social-section {
+    background-color: #D4A373;
+    color: #3b2a20;
+    padding: 30px 0 5px; /* Increased top padding to make room for cat */
+    text-align: center;
+    margin: 0;
+    border-bottom: none;
+    position: relative;
+}
+
+.line {
+    border: none;
+    height: 2px;
+    background-color: #432818;
+    width: 100%;
+    margin: 20px auto;
+}
+/* Added space where cat sits */
+.cat-space {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.social-section p {
+    margin: 0 0 10px; /* Increased top margin to accommodate cat */
+    font-weight: 700; /* Medium bold */
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d9b38c;
+}

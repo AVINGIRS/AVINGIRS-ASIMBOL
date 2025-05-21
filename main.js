@@ -258,4 +258,3 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.style.transform = `translateX(${position}px)`;
   });
 });
-
