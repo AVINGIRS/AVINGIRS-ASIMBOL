@@ -93,7 +93,7 @@ body {
   color: #432818;
   font-weight: 700;
   font-size: 18px;
-  border-bottom: 1px solid #432818;
+  border-bottom: 1px solid lch(45.25% 12.17 59.25);
   transition: color .3s, border-color .3s;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -160,7 +160,7 @@ main {
   transition: background .3s;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-.about-btn:hover { background: #c07c7c; }
+.about-btn:hover { background: #dabead; }
 
 /* Image Container with Beans Behind Cup */
 .image-container {
@@ -1305,3 +1305,4 @@ footer {
     margin-top: 10px;
   }
 }
+
