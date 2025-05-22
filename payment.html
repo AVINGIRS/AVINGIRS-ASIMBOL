@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" href="img/cat.png" />
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+        </svg>
+        Back
+    </button>
+
+    <div class="container">
+        <!-- Billing Address Section -->
+        <div class="billing-section">
+            <h2>Billing Address</h2>
+            <form id="payment-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First name *</label>
+                        <input type="text" id="first-name" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last name *</label>
+                        <input type="text" id="last-name" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Complete address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apartment">Apartment, Unit, etc.</label>
+                    <input type="text" id="apartment" name="apartment">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postal-code">Postal code *</label>
+                        <input type="text" id="postal-code" name="postalCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <h3>Payment</h3>
+                    <div class="payment-options">
+                        <div class="payment-option" onclick="selectPayment('cod')">
+                            <input type="radio" id="cod" name="payment" value="cod">
+                            <label for="cod">COD</label>
+                        </div>
+                        <div class="payment-option selected" onclick="selectPayment('gcash')">
+                            <input type="radio" id="gcash" name="payment" value="gcash" checked>
+                            <label for="gcash">Gcash</label>
+                        </div>
+                    </div>
+
+                    <div class="payment-details" id="payment-details">
+                        <div class="payment-info gcash-info">
+                            <p>Kindly wait for the QR code or Gcash number that will be sent to your contact number indicated in your order form.</p>
+                            <ol>
+                                <li>Upon receiving QR code, proceed to the Gcash app > Send Money > Input Gcash number or scan the QR code and enter the total order amount.</li>
+                                <li>Please provide the screenshot of the proof of payment to the Meows & Brews representative.</li>
+                            </ol>
+                            <div class="note">
+                                <strong>NOTE: YOUR ORDER IS PROCESSED ONCE PROOF OF PAYMENT IS CONFIRMED.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="complete-order-btn">Complete order</button>
+            </form>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="order-items">
+                <!-- Sample items matching the image -->
+                <div class="order-item">
+                    <img src="/api/placeholder/60/60" alt="Tabby Cream" class="item-image">
+                    <div class="item-details">
+                        <div class="item-name">Tabby Cream</div>
+                        <div class="item-quantity">Quantity: 2</div>
+                    </div>
+                    <div class="item-price">₱240</div>
+                </div>
+                <div class="order-item">
+                    <img src="/api/placeholder/60/60" alt="Americato" class="item-image">
+                    <div class="item-details">
+                        <div class="item-name">Americato</div>
+                        <div class="item-quantity">Quantity: 1</div>
+                    </div>
+                    <div class="item-price">₱110</div>
+                </div>
+            </div>
+            <div class="total-section">
+                <div class="total-row">
+                    <span>TOTAL</span>
+                    <span id="total-amount">₱350</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

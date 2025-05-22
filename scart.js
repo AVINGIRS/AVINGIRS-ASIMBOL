@@ -91,15 +91,17 @@ function setupThankYouModal() {
             </div>
             <h2>Thank you for your order!</h2>
             <p>We're preparing your delicious items.</p>
-            <button class="close-modal-btn">Continue</button>
+            <button class="close-modal-btn">PAYMENT</button>
         </div>
     `;
     document.body.appendChild(modal);
 
     modal.querySelector('.close-modal-btn').addEventListener('click', function () {
         modal.classList.remove('show');
-        localStorage.removeItem('cafeCart');
-        loadCart();
+        // Store cart data for payment page and redirect
+        const cart = JSON.parse(localStorage.getItem('cafeCart')) || [];
+        localStorage.setItem('paymentCart', JSON.stringify(cart));
+        window.location.href = 'payment.html';
     });
     
     // Set up checkout button with empty cart check
@@ -381,4 +383,3 @@ function createEmailNotification() {
     `;
     return note;
 }
-
