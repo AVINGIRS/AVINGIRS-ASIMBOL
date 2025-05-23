@@ -90,7 +90,7 @@ function setupThankYouModal() {
                 </svg>
             </div>
             <h2>Thank you for your order!</h2>
-            <p>We're preparing your delicious items.</p>
+            <p>Please proceed to your payment.</p>
             <button class="close-modal-btn">PAYMENT</button>
         </div>
     `;
